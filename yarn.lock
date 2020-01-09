@@ -8636,13 +8636,6 @@ postcss-simple-vars@^4.0.0:
   dependencies:
     postcss "^6.0.9"
 
-postcss-simple-vars@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.npm.taobao.org/postcss-simple-vars/download/postcss-simple-vars-5.0.2.tgz#e2f81b3d0847ddd4169816b6d141b91d51e6e22e"
-  integrity sha1-4vgbPQhH3dQWmBa20UG5HVHm4i4=
-  dependencies:
-    postcss "^7.0.14"
-
 postcss-svgo@^4.0.2:
   version "4.0.2"
   resolved "https://registry.npm.taobao.org/postcss-svgo/download/postcss-svgo-4.0.2.tgz#17b997bc711b333bab143aaed3b8d3d6e3d38258"
