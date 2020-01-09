@@ -1,0 +1,51 @@
+:root {
+  --button-color-schemes: primary, secondary, success, danger, default;
+  --button-color-primary: #ff7f00;
+  --button-color-secondary: #1b98e0;
+  --button-color-success: #37af79;
+  --button-color-danger: #ff1654;
+  --button-color-default: #333;
+
+  --button-sizes: l, m, s;
+  --button-paddings: 12px 24px, 8px 16px, 6px 12px;
+  --button-font-sizes: 18px, 14px, 12px;
+  --button-border-radius: 7px, 5px, 3px;
+
+  --button-hover-opacity: 0.75;
+}
+
+.main {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: #fff0;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  line-height: 1;
+
+  &:hover {
+    opacity: var(--button-hover-opacity);
+  }
+}
+
+.line {
+  border: 1px solid;
+  /*button colors loop*/
+  @each $val in (var(--button-color-schemes)) {
+    &.$(val) {
+      color: var(--button-color-$(val));
+    }
+  }
+}
+
+/*button sizes loop*/
+@each $size, $padding, $fontSize, $borderRadius in (var(--button-sizes)), (var(--button-paddings)), (var(--button-font-sizes)), (var(--button-border-radius)) {
+.$(size) {
+  padding: $(padding);
+  font-size: $(fontSize);
+  border-radius: $(borderRadius);
+}
+}

@@ -2,6 +2,8 @@
   "name": "wooui-react",
   "version": "0.1.0",
   "private": true,
+  "module": "./src/index.js",
+  "main": "./build/wooui-react.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,10 +13,9 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "build:library": "rm -rf build && env-cmd -f .env.library react-app-rewired build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +31,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "postcss-at-rules-variables": "^0.1.10",
+    "postcss-each": "^0.10.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-pxtorem": "^4.0.1",
+    "prettier": "^1.19.1",
+    "react-app-rewire-postcss": "^3.0.2",
+    "react-app-rewired": "^2.1.5",
+    "react-styleguidist": "^10.4.1"
   }
 }
