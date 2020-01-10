@@ -4,7 +4,7 @@
   --button-color-secondary: #1b98e0;
   --button-color-success: #37af79;
   --button-color-danger: #ff1654;
-  --button-color-default: #333;
+  --button-color-default: #666;
 
   --button-sizes: l, m, s;
   --button-paddings: 12px 24px, 8px 16px, 6px 12px;
@@ -12,6 +12,7 @@
   --button-border-radius: 7px, 5px, 3px;
 
   --button-hover-opacity: 0.75;
+  --button-disabled-opacity: 0.5;
 }
 
 .main {
@@ -26,8 +27,13 @@
   position: relative;
   line-height: 1;
 
-  &:hover {
+  &:not(:disabled):hover {
     opacity: var(--button-hover-opacity);
+  }
+
+  &:disabled {
+    opacity: var(--button-disabled-opacity);
+    cursor: not-allowed;
   }
 }
 
@@ -41,6 +47,18 @@
   }
 }
 
+.flat {
+  color: #fff;
+  border: 1px solid;
+  /*button colors loop*/
+  @each $val in (var(--button-color-schemes)) {
+    &.$(val) {
+      border-color: var(--button-color-$(val));
+      background-color: var(--button-color-$(val));
+    }
+  }
+}
+
 /*button sizes loop*/
 @each $size, $padding, $fontSize, $borderRadius in (var(--button-sizes)), (var(--button-paddings)), (var(--button-font-sizes)), (var(--button-border-radius)) {
 .$(size) {
@@ -48,4 +66,12 @@
   font-size: $(fontSize);
   border-radius: $(borderRadius);
 }
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.icon + .text {
+  margin-left: em(5px);
 }

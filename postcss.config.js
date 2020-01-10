@@ -6,6 +6,10 @@ module.exports = {
       }
     },
     'postcss-nested': {},
+    'postcss-units': {
+      size: 16,
+      precision: 6
+    },
     'postcss-pxtorem': {
       rootValue: 16,
       propWhiteList: [

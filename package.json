@@ -40,6 +40,7 @@
     "postcss-each": "^0.10.0",
     "postcss-nested": "^4.2.1",
     "postcss-pxtorem": "^4.0.1",
+    "postcss-units": "^1.2.1",
     "prettier": "^1.19.1",
     "react-app-rewire-postcss": "^3.0.2",
     "react-app-rewired": "^2.1.5",

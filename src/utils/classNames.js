@@ -1,3 +1,3 @@
-export default function classList(...classes) {
+export default function classNames(...classes) {
   return classes.filter(item => !!item).join(' ');
 }

@@ -1,3 +1,3 @@
-import Box from './components/Box';
 import Button from './components/Button';
-export { Box, Button };
+import Spinner from './components/Spinner';
+export { Button, Spinner };
