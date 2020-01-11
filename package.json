@@ -17,9 +17,6 @@
     "styleguide:build": "styleguidist build",
     "build:library": "rm -rf build && env-cmd -f .env.library react-app-rewired build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
