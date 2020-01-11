@@ -33,6 +33,8 @@
     "env-cmd": "^10.0.1",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.6",
+    "lint-staged": "^9.5.0",
     "postcss-at-rules-variables": "^0.1.10",
     "postcss-each": "^0.10.0",
     "postcss-nested": "^4.2.1",
@@ -42,5 +44,16 @@
     "react-app-rewire-postcss": "^3.0.2",
     "react-app-rewired": "^2.1.5",
     "react-styleguidist": "^10.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
