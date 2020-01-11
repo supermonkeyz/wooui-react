@@ -33,7 +33,7 @@ sorts.map(
 ```jsx
 const sizes = ['s', 'm', 'l'];
 
-sizes.map(size => <Button size={size} className="button-item">按钮</Button>);
+sizes.map(size => <Button key={size} size={size} className="button-item">按钮</Button>);
 ```
 
 ## 不可用
